@@ -1,0 +1,46 @@
+@using Adoztech.Web.Options
+@using Adoztech.Web.Resources
+@using Adoztech.Web.Services.Routing
+@using Microsoft.Extensions.Options
+@inject IOptions<SiteSettings> SiteOptions
+@inject IOptions<BrandingSettings> BrandingOptions
+@inject IStringLocalizer<SharedResource> Localizer
+@inject ICultureRouteService RouteService
+@{
+    var currentCulture = (ViewContext.RouteData.Values["culture"]?.ToString() ?? "tr").ToLowerInvariant();
+    var alternateCulture = currentCulture == "tr" ? "en" : "tr";
+    var brand = BrandingOptions.Value;
+    var alternatePath = RouteService.GetAlternatePath(Context, alternateCulture);
+}
+<header class="site-header" x-data="{ open: false }">
+    <div class="container header-inner">
+        <a class="brand-mark" href="@RouteService.GetPath(currentCulture, "home")">
+            <span class="brand-mark__badge">A</span>
+            <span class="brand-mark__text">@brand.LogoText</span>
+        </a>
+
+        <button type="button" class="mobile-toggle" @@click="open = !open" x-bind:aria-expanded="open.toString()" aria-controls="primary-nav">
+            <span x-show="!open">@Localizer["OpenMenuLabel"]</span>
+            <span x-show="open">@Localizer["CloseMenuLabel"]</span>
+        </button>
+
+        <nav id="primary-nav" class="primary-nav" x-bind:class="{ 'is-open': open }">
+            <a href="@RouteService.GetPath(currentCulture, "home")">@Localizer["NavHome"]</a>
+            <a href="@RouteService.GetPath(currentCulture, "about")">@Localizer["NavAbout"]</a>
+            <a href="@RouteService.GetPath(currentCulture, "services")">@Localizer["NavServices"]</a>
+            <a href="@RouteService.GetPath(currentCulture, "projects")">@Localizer["NavProjects"]</a>
+            <a href="@RouteService.GetPath(currentCulture, "process")">@Localizer["NavProcess"]</a>
+            <a href="@RouteService.GetPath(currentCulture, "contact")">@Localizer["NavContact"]</a>
+        </nav>
+
+        <div class="header-actions">
+            <button type="button" class="theme-toggle" data-theme-toggle aria-label="@Localizer["ThemeToggleLabel"]">
+                <span class="theme-toggle__state" data-theme-label>@Localizer["ThemeLight"]</span>
+            </button>
+            <a class="lang-toggle" href="@alternatePath" hreflang="@alternateCulture" aria-label="@Localizer["LanguageSwitchLabel"]">
+                @(currentCulture == "tr" ? "EN" : "TR")
+            </a>
+            <a class="button button--primary button--sm" href="@RouteService.GetPath(currentCulture, "quote")">@Localizer["NavQuote"]</a>
+        </div>
+    </div>
+</header>

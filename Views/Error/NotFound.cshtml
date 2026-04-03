@@ -1,0 +1,19 @@
+@using Adoztech.Web.Resources
+@using Adoztech.Web.Services.Routing
+@inject IStringLocalizer<SharedResource> Localizer
+@inject ICultureRouteService RouteService
+@model NotFoundPageViewModel
+@{
+    ViewData["Seo"] = Model.Seo;
+}
+<section class="page-hero">
+    <div class="container narrow">
+        <span class="eyebrow">@Model.Content.Eyebrow</span>
+        <h1>@Model.Content.Title</h1>
+        <p class="lead">@Model.Content.Lead</p>
+        <div class="hero-actions">
+            <a class="button button--primary" href="@RouteService.GetPath(Model.Culture, "home")">@Localizer["NavHome"]</a>
+            <a class="button button--ghost" href="@RouteService.GetPath(Model.Culture, "contact")">@Localizer["NavContact"]</a>
+        </div>
+    </div>
+</section>

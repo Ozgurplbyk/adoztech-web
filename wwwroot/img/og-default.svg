@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" fill="none">
+  <rect width="1200" height="630" rx="24" fill="#F3F1EB"/>
+  <rect x="56" y="56" width="1088" height="518" rx="28" fill="#E6E0D4"/>
+  <circle cx="184" cy="176" r="44" fill="#2F5D62"/>
+  <path d="M184 147l19 58h-15l-4-12h-23l-4 12h-15l20-58h22zm-4 16l-8 20h16l-8-20z" fill="#F3F1EB"/>
+  <text x="240" y="192" fill="#1F2A2C" font-family="Manrope, Arial, sans-serif" font-size="64" font-weight="800">Adoztech</text>
+  <text x="120" y="330" fill="#1F2A2C" font-family="Fraunces, Georgia, serif" font-size="72" font-weight="700">Kurumsal dijital deneyimler.</text>
+  <text x="120" y="398" fill="#526062" font-family="Manrope, Arial, sans-serif" font-size="32">Strategy, design and software delivery for brands that need trust.</text>
+  <rect x="120" y="456" width="264" height="64" rx="32" fill="#C46A3A"/>
+  <text x="164" y="497" fill="#ffffff" font-family="Manrope, Arial, sans-serif" font-size="28" font-weight="700">www.adoztech.com</text>
+</svg>

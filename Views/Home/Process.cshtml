@@ -1,0 +1,25 @@
+@model StandardPageViewModel
+@{
+    ViewData["Seo"] = Model.Seo;
+}
+<section class="page-hero">
+    <div class="container narrow">
+        <span class="eyebrow">@Model.Content.Eyebrow</span>
+        <h1>@Model.Content.Title</h1>
+        <p class="lead">@Model.Content.Lead</p>
+    </div>
+</section>
+<section class="section-block">
+    <div class="container narrow stack">
+        @foreach (var contentSection in Model.Content.Sections)
+        {
+            <article class="step-card step-card--wide">
+                <h2>@contentSection.Title</h2>
+                @foreach (var paragraph in contentSection.Paragraphs)
+                {
+                    <p>@paragraph</p>
+                }
+            </article>
+        }
+    </div>
+</section>

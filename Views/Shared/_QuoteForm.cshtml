@@ -1,0 +1,69 @@
+@using Adoztech.Web.Resources
+@inject IStringLocalizer<SharedResource> Localizer
+@model QuotePageViewModel
+<form method="post" class="form-card">
+    @Html.AntiForgeryToken()
+    <p class="form-note">@Localizer["FormNoticeLabel"]</p>
+    <div asp-validation-summary="ModelOnly" class="validation-summary"></div>
+    <div class="form-grid">
+        <div class="field">
+            <label asp-for="Form.FullName">@Localizer["QuoteFullNameLabel"]</label>
+            <input asp-for="Form.FullName" autocomplete="name" />
+            <span asp-validation-for="Form.FullName"></span>
+        </div>
+        <div class="field">
+            <label asp-for="Form.CompanyName">@Localizer["CompanyNameLabel"]</label>
+            <input asp-for="Form.CompanyName" autocomplete="organization" />
+            <span asp-validation-for="Form.CompanyName"></span>
+        </div>
+        <div class="field">
+            <label asp-for="Form.Email">@Localizer["EmailAddressLabel"]</label>
+            <input asp-for="Form.Email" autocomplete="email" />
+            <span asp-validation-for="Form.Email"></span>
+        </div>
+        <div class="field">
+            <label asp-for="Form.Phone">@Localizer["PhoneLabel"]</label>
+            <input asp-for="Form.Phone" autocomplete="tel" />
+            <span asp-validation-for="Form.Phone"></span>
+        </div>
+        <div class="field">
+            <label asp-for="Form.ServiceType">@Localizer["ServiceTypeLabel"]</label>
+            <select asp-for="Form.ServiceType">
+                <option value="">@Localizer["SelectPlaceholder"]</option>
+                @foreach (var option in Model.Content.ServiceOptions)
+                {
+                    <option value="@option.Value">@option.Label</option>
+                }
+            </select>
+            <span asp-validation-for="Form.ServiceType"></span>
+        </div>
+        <div class="field">
+            <label asp-for="Form.BudgetRange">@Localizer["BudgetRangeLabel"]</label>
+            <select asp-for="Form.BudgetRange">
+                <option value="">@Localizer["SelectPlaceholder"]</option>
+                @foreach (var option in Model.Content.BudgetOptions)
+                {
+                    <option value="@option.Value">@option.Label</option>
+                }
+            </select>
+            <span asp-validation-for="Form.BudgetRange"></span>
+        </div>
+        <div class="field field--full">
+            <label asp-for="Form.ProjectSummary">@Localizer["ProjectSummaryLabel"]</label>
+            <textarea asp-for="Form.ProjectSummary" rows="7"></textarea>
+            <span asp-validation-for="Form.ProjectSummary"></span>
+        </div>
+        <div class="field field--full">
+            <label asp-for="Form.Timeline">@Localizer["TimelineLabel"]</label>
+            <select asp-for="Form.Timeline">
+                <option value="">@Localizer["SelectPlaceholder"]</option>
+                @foreach (var option in Model.Content.TimelineOptions)
+                {
+                    <option value="@option.Value">@option.Label</option>
+                }
+            </select>
+            <span asp-validation-for="Form.Timeline"></span>
+        </div>
+    </div>
+    <button class="button button--primary" type="submit">@Localizer["SubmitQuoteLabel"]</button>
+</form>

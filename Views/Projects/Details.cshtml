@@ -1,0 +1,31 @@
+@using Adoztech.Web.Resources
+@using Adoztech.Web.Services.Routing
+@inject IStringLocalizer<SharedResource> Localizer
+@inject ICultureRouteService RouteService
+@model ProjectDetailsViewModel
+@{
+    ViewData["Seo"] = Model.Seo;
+}
+<section class="page-hero">
+    <div class="container page-grid">
+        <div>
+            <span class="eyebrow">@Model.Project.Category</span>
+            <h1>@Model.Project.Title</h1>
+            <p class="lead">@Model.Project.Summary</p>
+            <div class="detail-stack">
+                <article class="detail-card">
+                    <span>Stack</span>
+                    <p>@Model.Project.TechnologyStack</p>
+                </article>
+                <article class="detail-card">
+                    <span>Outcome</span>
+                    <p>@Model.Project.Outcome</p>
+                </article>
+            </div>
+            <a class="button button--ghost" href="@RouteService.GetPath(Model.Culture, "projects")">@Localizer["BackToProjectsLabel"]</a>
+        </div>
+        <div class="project-visual">
+            <img src="@Model.Project.ImagePath" alt="@Model.Project.ImageAlt" />
+        </div>
+    </div>
+</section>

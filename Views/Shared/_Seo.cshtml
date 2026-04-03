@@ -1,0 +1,15 @@
+@model SeoViewModel
+<title>@Model.Title</title>
+<meta name="description" content="@Model.Description" />
+<meta property="og:title" content="@Model.Title" />
+<meta property="og:description" content="@Model.Description" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="@Model.CanonicalUrl" />
+<meta property="og:image" content="@Model.ImageUrl" />
+<meta property="og:locale" content="@Model.Locale" />
+<meta property="og:locale:alternate" content="@Model.AlternateLocale" />
+<meta name="twitter:card" content="summary_large_image" />
+<link rel="canonical" href="@Model.CanonicalUrl" />
+<link rel="alternate" hreflang="tr" href="@(Model.Locale == "tr_TR" ? Model.CanonicalUrl : Model.AlternateUrl)" />
+<link rel="alternate" hreflang="en" href="@(Model.Locale == "en_US" ? Model.CanonicalUrl : Model.AlternateUrl)" />
+<link rel="alternate" hreflang="x-default" href="@Model.CanonicalUrl" />

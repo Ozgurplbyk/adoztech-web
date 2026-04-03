@@ -1,0 +1,29 @@
+@model QuotePageViewModel
+@{
+    ViewData["Seo"] = Model.Seo;
+}
+<section class="page-hero">
+    <div class="container page-grid">
+        <div>
+            <span class="eyebrow">@Model.Content.Eyebrow</span>
+            <h1>@Model.Content.Title</h1>
+            <p class="lead">@Model.Content.Lead</p>
+            <div class="article-card">
+                <h2>@Model.Content.FormLead</h2>
+                <ul class="checklist">
+                    @foreach (var item in Model.Content.ChecklistItems)
+                    {
+                        <li>@item</li>
+                    }
+                </ul>
+            </div>
+        </div>
+        <div>
+            <div class="section-heading section-heading--compact">
+                <h2>@Model.Content.FormTitle</h2>
+                <p>@Model.Content.FormLead</p>
+            </div>
+            @await Html.PartialAsync("_QuoteForm", Model)
+        </div>
+    </div>
+</section>

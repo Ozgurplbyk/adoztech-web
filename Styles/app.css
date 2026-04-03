@@ -1,0 +1,19 @@
+@import "tailwindcss";
+@source "../Views";
+@source "../Controllers";
+@source "../ViewModels";
+@import "./theme.css";
+
+@theme {
+  --color-bg-main: var(--bg-main);
+  --color-bg-elevated: var(--bg-elevated);
+  --color-surface: var(--surface);
+  --color-text-main: var(--text-main);
+  --color-text-soft: var(--text-soft);
+  --color-brand-main: var(--brand-main);
+  --color-brand-strong: var(--brand-strong);
+  --color-brand-soft: var(--brand-soft);
+  --color-accent: var(--accent);
+  --color-accent-strong: var(--accent-strong);
+  --color-border: var(--border);
+}

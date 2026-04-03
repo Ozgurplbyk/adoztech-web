@@ -1,0 +1,53 @@
+@using Adoztech.Web.Options
+@using Adoztech.Web.Resources
+@using Adoztech.Web.Services.Routing
+@using Microsoft.Extensions.Options
+@inject IOptions<SiteSettings> SiteOptions
+@inject IOptions<BrandingSettings> BrandingOptions
+@inject IStringLocalizer<SharedResource> Localizer
+@inject ICultureRouteService RouteService
+@{
+    var currentCulture = (ViewContext.RouteData.Values["culture"]?.ToString() ?? "tr").ToLowerInvariant();
+    var alternateCulture = currentCulture == "tr" ? "en" : "tr";
+    var seo = ViewData["Seo"] as SeoViewModel;
+    var site = SiteOptions.Value;
+    var brand = BrandingOptions.Value;
+}
+<!DOCTYPE html>
+<html lang="@currentCulture" data-theme="light">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    @if (seo is not null)
+    {
+        @await Html.PartialAsync("_Seo", seo)
+    }
+    <script>
+        (function () {
+            var key = "adoztech-theme";
+            var stored = localStorage.getItem(key);
+            var systemDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+            var theme = stored === "light" || stored === "dark" ? stored : (systemDark ? "dark" : "light");
+            document.documentElement.setAttribute("data-theme", theme);
+        }());
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Fraunces:opsz,wght@9..144,600;9..144,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+</head>
+<body>
+    <a class="skip-link" href="#main-content">@Localizer["SkipToContent"]</a>
+    @await Html.PartialAsync("_Header")
+    <div class="shell">
+        @await Html.PartialAsync("_Alerts")
+        <main id="main-content">
+            @RenderBody()
+        </main>
+    </div>
+    @await Html.PartialAsync("_Footer")
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.14.8/dist/cdn.min.js"></script>
+    <script src="~/js/theme.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

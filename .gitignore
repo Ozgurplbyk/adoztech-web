@@ -1,0 +1,11 @@
+bin/
+obj/
+node_modules/
+App_Data/
+Logs/
+.DS_Store
+*.user
+*.suo
+*.db
+*.db-shm
+*.db-wal

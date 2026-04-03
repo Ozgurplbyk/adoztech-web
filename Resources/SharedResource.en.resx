@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype"><value>text/microsoft-resx</value></resheader>
+  <resheader name="version"><value>2.0</value></resheader>
+  <resheader name="reader"><value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader>
+  <resheader name="writer"><value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader>
+  <data name="NavHome" xml:space="preserve"><value>Home</value></data>
+  <data name="NavAbout" xml:space="preserve"><value>About</value></data>
+  <data name="NavServices" xml:space="preserve"><value>Services</value></data>
+  <data name="NavProjects" xml:space="preserve"><value>Projects</value></data>
+  <data name="NavProcess" xml:space="preserve"><value>Process</value></data>
+  <data name="NavQuote" xml:space="preserve"><value>Request Quote</value></data>
+  <data name="NavContact" xml:space="preserve"><value>Contact</value></data>
+  <data name="FooterLegal" xml:space="preserve"><value>Legal</value></data>
+  <data name="FooterFollowUs" xml:space="preserve"><value>Follow us</value></data>
+  <data name="FooterRights" xml:space="preserve"><value>All rights reserved.</value></data>
+  <data name="PrivacyPolicyLabel" xml:space="preserve"><value>Privacy Policy</value></data>
+  <data name="KvkkLabel" xml:space="preserve"><value>Privacy Notice</value></data>
+  <data name="ProjectDetailsLabel" xml:space="preserve"><value>View details</value></data>
+  <data name="BackToProjectsLabel" xml:space="preserve"><value>Back to projects</value></data>
+  <data name="ReadMoreLabel" xml:space="preserve"><value>Read more</value></data>
+  <data name="ThemeLight" xml:space="preserve"><value>Light theme</value></data>
+  <data name="ThemeDark" xml:space="preserve"><value>Dark theme</value></data>
+  <data name="ThemeSystem" xml:space="preserve"><value>System theme</value></data>
+  <data name="ThemeToggleLabel" xml:space="preserve"><value>Theme preference</value></data>
+  <data name="LanguageSwitchLabel" xml:space="preserve"><value>Switch language</value></data>
+  <data name="SkipToContent" xml:space="preserve"><value>Skip to content</value></data>
+  <data name="ContactFullNameLabel" xml:space="preserve"><value>Full Name</value></data>
+  <data name="QuoteFullNameLabel" xml:space="preserve"><value>Full Name</value></data>
+  <data name="CompanyNameLabel" xml:space="preserve"><value>Company Name</value></data>
+  <data name="EmailAddressLabel" xml:space="preserve"><value>Email</value></data>
+  <data name="PhoneLabel" xml:space="preserve"><value>Phone</value></data>
+  <data name="SubjectLabel" xml:space="preserve"><value>Subject</value></data>
+  <data name="MessageLabel" xml:space="preserve"><value>Message</value></data>
+  <data name="ServiceTypeLabel" xml:space="preserve"><value>Service Type</value></data>
+  <data name="BudgetRangeLabel" xml:space="preserve"><value>Estimated Budget Range</value></data>
+  <data name="ProjectSummaryLabel" xml:space="preserve"><value>Project Summary</value></data>
+  <data name="TimelineLabel" xml:space="preserve"><value>Requested Timeline</value></data>
+  <data name="SubmitContactLabel" xml:space="preserve"><value>Send message</value></data>
+  <data name="SubmitQuoteLabel" xml:space="preserve"><value>Submit request</value></data>
+  <data name="SelectPlaceholder" xml:space="preserve"><value>Select an option</value></data>
+  <data name="ValidationRequired" xml:space="preserve"><value>This field is required.</value></data>
+  <data name="ValidationEmail" xml:space="preserve"><value>Please enter a valid email address.</value></data>
+  <data name="ValidationMaxLength" xml:space="preserve"><value>The entered value exceeds the allowed length.</value></data>
+  <data name="ValidationMessageLength" xml:space="preserve"><value>The message must be at least 20 characters.</value></data>
+  <data name="ValidationProjectSummaryLength" xml:space="preserve"><value>The project summary must be at least 30 characters.</value></data>
+  <data name="ValidationInvalidSelection" xml:space="preserve"><value>Please choose a valid option from the list.</value></data>
+  <data name="ContactSubmissionSuccess" xml:space="preserve"><value>Your message has been delivered successfully. We will get back to you shortly.</value></data>
+  <data name="ContactSubmissionFallback" xml:space="preserve"><value>Your request has been saved, but email delivery encountered a temporary issue. Our team will still review your submission.</value></data>
+  <data name="QuoteSubmissionSuccess" xml:space="preserve"><value>Your quote request has been received. We will review the scope and respond soon.</value></data>
+  <data name="QuoteSubmissionFallback" xml:space="preserve"><value>Your request has been saved, but email delivery encountered a temporary issue. Our team will still review your submission.</value></data>
+  <data name="FormNoticeLabel" xml:space="preserve"><value>Fields marked with an asterisk are required.</value></data>
+  <data name="FeaturedProjectsLabel" xml:space="preserve"><value>Featured projects</value></data>
+  <data name="WhyAdoztechLabel" xml:space="preserve"><value>Why Adoztech?</value></data>
+  <data name="ServicesOverviewLabel" xml:space="preserve"><value>Service areas</value></data>
+  <data name="ProcessOverviewLabel" xml:space="preserve"><value>Working process</value></data>
+  <data name="ContactSummaryLabel" xml:space="preserve"><value>Contact summary</value></data>
+  <data name="NextStepLabel" xml:space="preserve"><value>Next step</value></data>
+  <data name="OpenMenuLabel" xml:space="preserve"><value>Open menu</value></data>
+  <data name="CloseMenuLabel" xml:space="preserve"><value>Close menu</value></data>
+</root>
