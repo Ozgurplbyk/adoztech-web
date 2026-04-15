@@ -9,7 +9,7 @@ import fr from './locales/fr.json';
 import ar from './locales/ar.json';
 import zh from './locales/zh.json';
 
-const savedLang = localStorage.getItem('adoztech-lang') || 'en';
+const savedLang = localStorage.getItem('adoztech-lang') || 'tr';
 
 i18n.use(initReactI18next).init({
   resources: {
@@ -22,7 +22,7 @@ i18n.use(initReactI18next).init({
     zh: { translation: zh },
   },
   lng: savedLang,
-  fallbackLng: 'en',
+  fallbackLng: 'tr',
   interpolation: { escapeValue: false },
 });
 
