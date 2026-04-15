@@ -1,11 +1,28 @@
-bin/
-obj/
+# Dependencies
 node_modules/
-App_Data/
-Logs/
+.pnp
+.pnp.js
+
+# Build
+dist/
+build/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
 .DS_Store
-*.user
-*.suo
-*.db
-*.db-shm
-*.db-wal
+Thumbs.db
+
+# Env
+.env
+.env.local
+.env.*.local
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*

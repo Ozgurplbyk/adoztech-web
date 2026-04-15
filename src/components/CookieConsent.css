@@ -1,0 +1,110 @@
+/* ===== COOKIE CONSENT BANNER ===== */
+.cookie-consent {
+  position: fixed;
+  bottom: 1.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 500;
+  width: calc(100% - 3rem);
+  max-width: 720px;
+}
+
+.cookie-consent__inner {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.25rem 1.5rem;
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-xl);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  position: relative;
+}
+
+.cookie-consent__icon {
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-lg);
+  background: rgba(59, 130, 246, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-primary-400);
+  flex-shrink: 0;
+}
+
+.cookie-consent__text {
+  flex: 1;
+  min-width: 0;
+}
+
+.cookie-consent__title {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--text-primary) !important;
+  margin-bottom: 0.25rem;
+}
+
+.cookie-consent__desc {
+  font-size: 0.8125rem;
+  color: var(--text-tertiary) !important;
+  line-height: 1.5;
+}
+
+.cookie-consent__actions {
+  display: flex;
+  gap: 0.5rem;
+  flex-shrink: 0;
+}
+
+.cookie-consent__close {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-md);
+  color: var(--text-muted);
+  transition: all var(--transition-fast);
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+
+.cookie-consent__close:hover {
+  color: var(--text-primary);
+  background: rgba(148, 163, 184, 0.1);
+}
+
+/* Mobile responsive */
+@media (max-width: 640px) {
+  .cookie-consent {
+    bottom: 1rem;
+    width: calc(100% - 2rem);
+  }
+
+  .cookie-consent__inner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+    padding: 1.25rem;
+    padding-right: 2.5rem;
+  }
+
+  .cookie-consent__icon {
+    display: none;
+  }
+
+  .cookie-consent__actions {
+    width: 100%;
+  }
+
+  .cookie-consent__actions .btn {
+    flex: 1;
+  }
+}
