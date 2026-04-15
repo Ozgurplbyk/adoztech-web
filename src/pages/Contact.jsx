@@ -9,7 +9,7 @@ import './Pages.css';
 
 export default function Contact() {
   const { t } = useTranslation();
-  const [form, setForm] = useState({ name: '', email: '', phone: '', subject: '', message: '' });
+  const [form, setForm] = useState({ name: '', email: '', dialCode: '+90', phone: '', subject: '', message: '' });
   const [errors, setErrors] = useState({});
   const [sending, setSending] = useState(false);
   const [sent, setSent] = useState(false);
@@ -41,7 +41,7 @@ export default function Contact() {
       setTimeout(() => {
         setSending(false);
         setSent(true);
-        setForm({ name: '', email: '', phone: '', subject: '', message: '' });
+        setForm({ name: '', email: '', dialCode: '+90', phone: '', subject: '', message: '' });
       }, 1500);
       return;
     }
@@ -50,13 +50,13 @@ export default function Contact() {
       await emailjs.send(serviceId, templateId, {
         from_name: form.name,
         from_email: form.email,
-        phone: form.phone,
+        phone: form.phone ? `${form.dialCode} ${form.phone}` : '',
         subject: form.subject,
         message: form.message,
       }, publicKey);
 
       setSent(true);
-      setForm({ name: '', email: '', phone: '', subject: '', message: '' });
+      setForm({ name: '', email: '', dialCode: '+90', phone: '', subject: '', message: '' });
 
       // Track successful form submission in GA
       if (window.ga4Initialized) {
@@ -135,7 +135,26 @@ export default function Contact() {
                     </div>
                     <div className="form-group">
                       <label className="form-label" htmlFor="phone">{t('contact.phoneLabel')}</label>
-                      <input id="phone" name="phone" className="form-input" placeholder={t('contact.phonePlaceholder')} value={form.phone} onChange={handleChange} />
+                      <div style={{ display: 'flex', gap: '0.5rem' }}>
+                        <select 
+                          name="dialCode" 
+                          className="form-input" 
+                          style={{ width: '130px', paddingRight: '0.5rem' }}
+                          value={form.dialCode} 
+                          onChange={handleChange}
+                        >
+                          <option value="+90">🇹🇷 +90</option>
+                          <option value="+1">🇺🇸 +1</option>
+                          <option value="+44">🇬🇧 +44</option>
+                          <option value="+49">🇩🇪 +49</option>
+                          <option value="+33">🇫🇷 +33</option>
+                          <option value="+34">🇪🇸 +34</option>
+                          <option value="+971">🇦🇪 +971</option>
+                          <option value="+86">🇨🇳 +86</option>
+                          <option value="+7">🇷🇺 +7</option>
+                        </select>
+                        <input id="phone" name="phone" className="form-input" style={{ flex: 1 }} placeholder={t('contact.phonePlaceholder')} value={form.phone} onChange={handleChange} />
+                      </div>
                     </div>
                     <div className="form-group">
                       <label className="form-label" htmlFor="subject">{t('contact.subjectLabel')}</label>
