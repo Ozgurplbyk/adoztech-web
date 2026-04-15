@@ -250,6 +250,13 @@
     },
     "sendError": "Mesaj gönderilemedi. Lütfen daha sonra tekrar deneyin veya doğrudan e-posta gönderin."
   },
+  "newsletter": {
+    "title": "Gelişmelerden Haberdar Olun",
+    "description": "Özel fırsatlar, yeni projeler ve teknoloji dünyasından ipuçları için bültenimize abone olun.",
+    "placeholder": "E-posta adresiniz",
+    "button": "Abone Ol",
+    "successMessage": "Başarıyla abone oldunuz! Fırsatları kaçırmayacaksınız."
+  },
   "footer": {
     "description": "Web, mobil, yapay zeka ve dijital büyüme çözümleri sunan premium teknoloji ajansı.",
     "quickLinks": "Hızlı Bağlantılar",

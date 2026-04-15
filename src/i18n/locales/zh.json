@@ -250,6 +250,13 @@
     },
     "sendError": "消息发送失败。请稍后重试。"
   },
+  "newsletter": {
+    "title": "保持联系",
+    "description": "订阅我们的新闻通讯，获取技术世界的特别优惠和新闻。",
+    "placeholder": "您的电子邮箱",
+    "button": "订阅",
+    "successMessage": "订阅成功！"
+  },
   "footer": {
     "description": "高端技术机构。",
     "quickLinks": "快速链接",

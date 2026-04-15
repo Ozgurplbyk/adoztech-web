@@ -94,6 +94,15 @@
 }
 
 @media (max-width: 640px) {
+  .footer {
+    padding-bottom: 5rem;
+  }
+  
+  .footer__cta p {
+    padding: 0 1rem;
+    font-size: 1rem;
+  }
+
   .footer__grid {
     grid-template-columns: 1fr;
   }
@@ -104,3 +113,4 @@
     text-align: center;
   }
 }
+

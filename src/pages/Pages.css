@@ -155,6 +155,37 @@
   border-radius: var(--radius-full);
 }
 
+@media (max-width: 768px) {
+  .hero__title {
+    font-size: 2.75rem;
+  }
+  .hero__cta {
+    flex-direction: column;
+    width: 100%;
+    gap: 1rem;
+    padding: 0 1rem;
+  }
+  .hero__cta .btn {
+    width: 100%;
+  }
+  .hero__stats {
+    flex-direction: row;
+    gap: 0.5rem;
+    padding: 1rem 0.5rem;
+    justify-content: space-around;
+  }
+  .hero__stat-value {
+    font-size: 1.25rem;
+  }
+  .hero__stat-label {
+    font-size: 0.65rem;
+  }
+  .hero__stat-divider {
+    width: 1px;
+    height: 30px;
+  }
+}
+
 /* ===== SERVICES GRID ===== */
 .services-grid {
   display: grid;

@@ -250,6 +250,13 @@
     },
     "sendError": "Error al enviar el mensaje. Inténtelo de nuevo más tarde."
   },
+  "newsletter": {
+    "title": "Mantente informado",
+    "description": "Suscríbete a nuestro boletín para recibir ofertas especiales y noticias del mundo tecnológico.",
+    "placeholder": "Tu correo electrónico",
+    "button": "Suscribirse",
+    "successMessage": "¡Suscripción exitosa!"
+  },
   "footer": {
     "description": "Agencia tecnológica premium.",
     "quickLinks": "Enlaces Rápidos",

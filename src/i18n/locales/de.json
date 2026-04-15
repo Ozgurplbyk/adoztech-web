@@ -250,6 +250,13 @@
     },
     "sendError": "Nachricht konnte nicht gesendet werden. Bitte versuchen Sie es später erneut."
   },
+  "newsletter": {
+    "title": "Bleiben Sie informiert",
+    "description": "Melden Sie sich für unseren Newsletter an, um spezielle Angebote und Neuigkeiten aus der Technologie zu erhalten.",
+    "placeholder": "Ihre E-Mail-Adresse",
+    "button": "Abonnieren",
+    "successMessage": "Erfolgreich abonniert!"
+  },
   "footer": {
     "description": "Premium-Technologieagentur für Web, Mobile, KI und digitales Wachstum.",
     "quickLinks": "Schnelllinks",

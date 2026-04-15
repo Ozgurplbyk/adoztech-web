@@ -250,6 +250,13 @@
     },
     "sendError": "Failed to send message. Please try again later or email us directly."
   },
+  "newsletter": {
+    "title": "Stay Informed",
+    "description": "Subscribe to our newsletter for special offers, new projects, and insights from the tech world.",
+    "placeholder": "Your email address",
+    "button": "Subscribe",
+    "successMessage": "Successfully subscribed! You won't miss our offers."
+  },
   "footer": {
     "description": "Premium technology agency delivering web, mobile, AI, and digital growth solutions.",
     "quickLinks": "Quick Links",

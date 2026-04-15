@@ -250,6 +250,13 @@
     },
     "sendError": "Échec de l'envoi du message. Veuillez réessayer ultérieurement."
   },
+  "newsletter": {
+    "title": "Restez informé",
+    "description": "Abonnez-vous à notre newsletter pour recevoir des offres spéciales et des actualités technologiques.",
+    "placeholder": "Votre adresse e-mail",
+    "button": "S'abonner",
+    "successMessage": "Abonnement réussi !"
+  },
   "footer": {
     "description": "Agence technologique premium.",
     "quickLinks": "Liens Rapides",
