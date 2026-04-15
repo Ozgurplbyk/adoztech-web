@@ -3,6 +3,7 @@ import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
 import { ArrowLeft, Clock, Calendar, Share2 } from 'lucide-react';
 import blogPosts from '../data/blogPosts';
+import blogTranslations from '../data/blogTranslations.json';
 import './Pages.css';
 
 export default function BlogPost() {
@@ -79,23 +80,32 @@ export default function BlogPost() {
               </p>
 
               {/* Rich content sections */}
-              {post.contentSections && post.contentSections.map((section, idx) => (
-                <div key={idx} className="blog-post__section">
-                  {section.heading && (
-                    <h2 style={{
-                      fontSize: 'clamp(1.25rem, 2vw, 1.75rem)',
-                      marginTop: idx > 0 ? '2.5rem' : '1rem',
-                      marginBottom: '1rem',
-                      color: 'var(--text-primary)',
-                    }}>
-                      {section.heading}
-                    </h2>
-                  )}
-                  {section.paragraphs.map((para, pIdx) => (
-                    <p key={pIdx}>{para}</p>
-                  ))}
-                </div>
-              ))}
+              {(()=>{
+                const tContent = blogTranslations[post.id];
+                let langKey = i18n.language === 'zh' ? 'zh-cn' : i18n.language;
+                let sections = post.contentSections; // defaults to Turkish
+                if (tContent && tContent[langKey]) {
+                   sections = tContent[langKey];
+                }
+                
+                return sections.map((section, idx) => (
+                  <div key={idx} className="blog-post__section">
+                    {section.heading && (
+                      <h2 style={{
+                        fontSize: 'clamp(1.25rem, 2vw, 1.75rem)',
+                        marginTop: idx > 0 ? '2.5rem' : '1rem',
+                        marginBottom: '1rem',
+                        color: 'var(--text-primary)',
+                      }}>
+                        {section.heading}
+                      </h2>
+                    )}
+                    {section.paragraphs.map((para, pIdx) => (
+                      <p key={pIdx}>{para}</p>
+                    ))}
+                  </div>
+                ));
+              })()}
 
               {/* Divider + Author CTA */}
               <div className="divider divider-glow" style={{ margin: '3rem 0' }} />
