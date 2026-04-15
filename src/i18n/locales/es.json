@@ -226,7 +226,7 @@
     "emailLabel": "Correo Electrónico",
     "emailPlaceholder": "tu@empresa.com",
     "phoneLabel": "Teléfono",
-    "phonePlaceholder": "+34 XXX XXX XXX",
+    "phonePlaceholder": "XXX XXX XXX",
     "subjectLabel": "Asunto",
     "subjectPlaceholder": "¿Cómo podemos ayudar?",
     "messageLabel": "Mensaje",

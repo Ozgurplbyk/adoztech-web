@@ -226,7 +226,7 @@
     "emailLabel": "Email Address",
     "emailPlaceholder": "you@company.com",
     "phoneLabel": "Phone Number",
-    "phonePlaceholder": "+90 5XX XXX XX XX",
+    "phonePlaceholder": "5XX XXX XX XX",
     "subjectLabel": "Subject",
     "subjectPlaceholder": "How can we help?",
     "messageLabel": "Message",

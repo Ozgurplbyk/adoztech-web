@@ -226,7 +226,7 @@
     "emailLabel": "电子邮件",
     "emailPlaceholder": "you@company.com",
     "phoneLabel": "电话号码",
-    "phonePlaceholder": "+86 XXX XXXX XXXX",
+    "phonePlaceholder": "XXX XXXX XXXX",
     "subjectLabel": "主题",
     "subjectPlaceholder": "我们如何帮助您？",
     "messageLabel": "消息",

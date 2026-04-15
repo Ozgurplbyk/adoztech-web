@@ -226,7 +226,7 @@
     "emailLabel": "Email",
     "emailPlaceholder": "vous@entreprise.fr",
     "phoneLabel": "Téléphone",
-    "phonePlaceholder": "+33 X XX XX XX XX",
+    "phonePlaceholder": "X XX XX XX XX",
     "subjectLabel": "Sujet",
     "subjectPlaceholder": "Comment pouvons-nous aider?",
     "messageLabel": "Message",
