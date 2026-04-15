@@ -10,7 +10,6 @@ import Analytics from './components/Analytics';
 import SEO from './components/SEO';
 import CookieConsent from './components/CookieConsent';
 import BackToTop from './components/BackToTop';
-import Newsletter from './components/Newsletter';
 
 import Home from './pages/Home';
 import About from './pages/About';
@@ -65,7 +64,6 @@ function App() {
           </Routes>
         </AnimatePresence>
       </main>
-      <Newsletter />
       <Footer />
       <BackToTop />
       <CookieConsent />
