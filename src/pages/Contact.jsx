@@ -68,6 +68,7 @@ export default function Contact() {
       }
     } catch (error) {
       console.error('EmailJS Error:', error);
+      alert('EmailJS Hatası (Lütfen Ekran Görüntüsü Atın):\\n' + JSON.stringify(error?.text || error?.message || error));
       setSendError(true);
     } finally {
       setSending(false);
