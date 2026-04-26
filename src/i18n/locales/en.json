@@ -258,7 +258,7 @@
     "emailLabel": "Email Address",
     "emailPlaceholder": "you@company.com",
     "phoneLabel": "Phone Number",
-    "phonePlaceholder": "5XX XXX XX XX",
+    "phonePlaceholder": "+1 234 567 8900",
     "subjectLabel": "Subject",
     "subjectPlaceholder": "How can we help?",
     "messageLabel": "Message",

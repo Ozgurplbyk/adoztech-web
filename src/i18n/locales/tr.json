@@ -258,7 +258,7 @@
     "emailLabel": "E-posta Adresi",
     "emailPlaceholder": "siz@sirket.com",
     "phoneLabel": "Telefon Numarası",
-    "phonePlaceholder": "5XX XXX XX XX",
+    "phonePlaceholder": "+90 5XX XXX XX XX",
     "subjectLabel": "Konu",
     "subjectPlaceholder": "Nasıl yardımcı olabiliriz?",
     "messageLabel": "Mesaj",

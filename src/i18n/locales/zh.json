@@ -150,7 +150,10 @@
     "p5Category": "网页应用",
     "p6Title": "CloudSync Pro",
     "p6Desc": "企业云管理解决方案。",
-    "p6Category": "网页应用"
+    "p6Category": "网页应用",
+    "p7Title": "梅廷杜兹达",
+    "p7Desc": "一个优质的作品集网站，将视觉叙事和人工智能艺术与技术融为一体。",
+    "p7Category": "网页设计与开发"
   },
   "glukomate": {
     "label": "我们的产品",
@@ -226,7 +229,7 @@
     "emailLabel": "电子邮件",
     "emailPlaceholder": "you@company.com",
     "phoneLabel": "电话号码",
-    "phonePlaceholder": "XXX XXXX XXXX",
+    "phonePlaceholder": "+1 234 567 8900",
     "subjectLabel": "主题",
     "subjectPlaceholder": "我们如何帮助您？",
     "messageLabel": "消息",
@@ -315,5 +318,34 @@
     "post11Desc": "作为首席执行官，适应人工智能的快速发展是没有商量余地的。了解我们在各个业务部门安全有效地实施人工智能的战略框架。",
     "post12Title": "未来的数字机构：技术与设计的交叉点",
     "post12Desc": "为什么传统的代理模式已经消亡，以及像 Adoztech 这样的混合技术设计工作室如何在实现真正的数字化转型方面发挥带头作用。"
+  },
+  "metinduzdag": {
+    "label": "个人作品集",
+    "title": "梅廷杜兹达",
+    "subtitle": "视觉叙事与人工智能艺术",
+    "heroDesc": "现代作品集体验突破了人工智能艺术的界限，将文化遗产与技术融为一体。在 Adoztech，我们构建了一个反映艺术家数字愿景的高性能平台。",
+    "visitSite": "访问网站",
+    "whatTitle": "关于项目",
+    "whatDesc": "该平台是为 Metin Düzdağ 开发的现代网络应用程序，旨在展示艺术家迷人的人工智能生成作品、宣布展览并管理合作。它展示了艺术家的著名项目，如“Anıtkabir”和“Galata Tower”，以及它们应有的数字美学。",
+    "featuresTitle": "主要特点",
+    "f1Title": "动态画廊",
+    "f1Desc": "优化的画廊系统，在不损失性能的情况下展示高分辨率人工智能作品。",
+    "f2Title": "内容管理系统管理",
+    "f2Desc": "通过 Payload CMS 集成即时更新展览、作品集和协作内容。",
+    "f3Title": "绩效驱动",
+    "f3Desc": "Next.js 技术提供闪电般的快速页面转换和顶级 SEO 兼容性。",
+    "f4Title": "互动体验",
+    "f4Desc": "使用 Framer Motion 创建的流畅且现代的动画，符合艺术精神。",
+    "techTitle": "使用的技术",
+    "t1Title": "Next.js",
+    "t1Desc": "现代 Web 架构和 SSR。",
+    "t2Title": "有效负载CMS",
+    "t2Desc": "灵活而强大的内容管理。",
+    "t3Title": "顺风 CSS",
+    "t3Desc": "快速且可扩展的设计。",
+    "t4Title": "成帧器运动",
+    "t4Desc": "高级用户交互。",
+    "whyTitle": "为什么选择阿多兹科技？",
+    "whyDesc": "像 Metin Düzdağ 这样有远见的艺术家的数字形象必须像他的作品一样令人印象深刻。我们将技术专长与艺术视角相结合，确保美学与技术的完美和谐。"
   }
 }

@@ -150,7 +150,10 @@
     "p5Category": "App Web",
     "p6Title": "CloudSync Pro",
     "p6Desc": "Gestion cloud entreprise.",
-    "p6Category": "App Web"
+    "p6Category": "App Web",
+    "p7Title": "Metin Düzdağ",
+    "p7Desc": "Un site Web de portfolio premium réunissant la narration visuelle, l'art de l'IA et la technologie.",
+    "p7Category": "Conception et développement de sites Web"
   },
   "glukomate": {
     "label": "Notre Produit",
@@ -226,7 +229,7 @@
     "emailLabel": "Email",
     "emailPlaceholder": "vous@entreprise.fr",
     "phoneLabel": "Téléphone",
-    "phonePlaceholder": "X XX XX XX XX",
+    "phonePlaceholder": "+1 234 567 8900",
     "subjectLabel": "Sujet",
     "subjectPlaceholder": "Comment pouvons-nous aider?",
     "messageLabel": "Message",
@@ -315,5 +318,34 @@
     "post11Desc": "En tant que PDG, s’adapter au rythme rapide de l’IA n’est pas négociable.Découvrez notre cadre stratégique pour mettre en œuvre l’IA dans toutes les unités commerciales de manière sûre et efficace.",
     "post12Title": "Futures agences numériques : à l'intersection de la technologie et du design",
     "post12Desc": "Pourquoi le modèle d'agence traditionnel est mort et comment les studios de conception technologique hybride comme Adoztech mènent la charge dans la réalisation d'une véritable transformation numérique."
+  },
+  "metinduzdag": {
+    "label": "Portefeuille personnel",
+    "title": "Metin Düzdağ",
+    "subtitle": "Narration visuelle et art de l'IA",
+    "heroDesc": "Une expérience de portfolio moderne qui repousse les limites de l’art de l’IA et allie héritage culturel et technologie.Chez Adoztech, nous avons construit une plateforme performante reflétant la vision numérique de l'artiste.",
+    "visitSite": "Visitez le site Web",
+    "whatTitle": "À propos du projet",
+    "whatDesc": "Développée pour Metin Düzdağ, cette plateforme est une application Web moderne conçue pour présenter les œuvres captivantes générées par l'IA de l'artiste, annoncer des expositions et gérer des collaborations.Il présente les projets prestigieux de l'artiste comme « Anıtkabir » et « Galata Tower » avec l'esthétique numérique qu'ils méritent.",
+    "featuresTitle": "Principales fonctionnalités",
+    "f1Title": "Galerie dynamique",
+    "f1Desc": "Un système de galerie optimisé où les œuvres d'IA haute résolution sont présentées sans perte de performances.",
+    "f2Title": "CMS Management",
+    "f2Desc": "Mises à jour instantanées du contenu d'exposition, de portfolio et de collaboration avec l'intégration de Payload CMS.",
+    "f3Title": "Axé sur la performance",
+    "f3Desc": "Transitions de page ultra-rapides et compatibilité SEO de premier plan fournies par la technologie Next.js.",
+    "f4Title": "Expérience interactive",
+    "f4Desc": "Animations fluides et modernes créées avec Framer Motion, correspondant à l'esprit de l'art.",
+    "techTitle": "Technologies utilisées",
+    "t1Title": "Suivant.js",
+    "t1Desc": "Architecture Web moderne et RSS.",
+    "t2Title": "CMS de charge utile",
+    "t2Desc": "Gestion de contenu flexible et puissante.",
+    "t3Title": "CSS vent arrière",
+    "t3Desc": "Conception rapide et évolutive.",
+    "t4Title": "Mouvement de l'encadreur",
+    "t4Desc": "Interactions utilisateur avancées.",
+    "whyTitle": "Pourquoi Adoztech ?",
+    "whyDesc": "La présence numérique d'un artiste visionnaire comme Metin Düzdağ devait être aussi impressionnante que ses œuvres.Nous avons combiné notre expertise technique avec une perspective artistique pour assurer une parfaite harmonie entre esthétique et technologie."
   }
 }
