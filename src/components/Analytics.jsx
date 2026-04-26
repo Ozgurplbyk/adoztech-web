@@ -16,8 +16,12 @@ export default function Analytics() {
       window.ga4Initialized = true;
     }
 
-    // Send pageview on route change
-    ReactGA.send({ hitType: 'pageview', page: location.pathname + location.search });
+    // Send pageview on route change with title
+    ReactGA.send({ 
+      hitType: 'pageview', 
+      page: location.pathname + location.search,
+      title: document.title
+    });
   }, [location]);
 
   return null; // This component doesn't render anything visually

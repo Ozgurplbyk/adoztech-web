@@ -825,6 +825,12 @@
   padding: 0;
 }
 
+.blog-card__link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
 .blog-card__image {
   height: 200px;
   overflow: hidden;

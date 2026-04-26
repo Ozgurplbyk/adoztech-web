@@ -4,6 +4,7 @@ import { useLocation } from 'react-router-dom';
 import { useEffect } from 'react';
 import { Code, Smartphone, Brain, Share2, Palette, Search, Wrench, Fingerprint, CheckCircle } from 'lucide-react';
 import './Pages.css';
+import SEO from '../components/SEO';
 
 const serviceIcons = [Code, Smartphone, Brain, Share2, Palette, Search, Wrench, Fingerprint];
 
@@ -27,6 +28,7 @@ export default function Services() {
 
   return (
     <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}>
+      <SEO titleKey="nav.services" descriptionKey="services.description" />
       <section className="page-header">
         <div className="container" style={{ position: 'relative', zIndex: 1 }}>
           <motion.span className="section-label" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}>

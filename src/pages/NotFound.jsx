@@ -3,12 +3,14 @@ import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
 import { Home, ArrowLeft, Search } from 'lucide-react';
 import './Pages.css';
+import SEO from '../components/SEO';
 
 export default function NotFound() {
   const { t } = useTranslation();
 
   return (
     <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}>
+      <SEO titleKey="notFound.title" />
       <section className="not-found">
         <div className="container">
           <motion.div

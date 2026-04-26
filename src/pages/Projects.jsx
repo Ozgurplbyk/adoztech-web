@@ -5,6 +5,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { ArrowUpRight } from 'lucide-react';
 import projectsData from '../data/projectsData';
 import './Pages.css';
+import SEO from '../components/SEO';
 
 export default function Projects() {
   const { t } = useTranslation();
@@ -15,6 +16,7 @@ export default function Projects() {
 
   return (
     <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}>
+      <SEO titleKey="nav.projects" descriptionKey="projects.description" />
       <section className="page-header">
         <div className="container" style={{ position: 'relative', zIndex: 1 }}>
           <motion.span className="section-label" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}>

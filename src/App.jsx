@@ -7,7 +7,6 @@ import Header from './components/layout/Header';
 import Footer from './components/layout/Footer';
 import ScrollToTop from './components/ScrollToTop';
 import Analytics from './components/Analytics';
-import SEO from './components/SEO';
 import CookieConsent from './components/CookieConsent';
 import BackToTop from './components/BackToTop';
 
@@ -37,7 +36,6 @@ function App() {
 
   return (
     <>
-      <SEO />
       <Analytics />
       <ScrollToTop />
       <Header />

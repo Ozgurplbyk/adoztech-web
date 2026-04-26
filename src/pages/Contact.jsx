@@ -6,6 +6,7 @@ import emailjs from '@emailjs/browser';
 import ReactGA from 'react-ga4';
 import config from '../config';
 import './Pages.css';
+import SEO from '../components/SEO';
 
 export default function Contact() {
   const { t } = useTranslation();
@@ -84,6 +85,7 @@ export default function Contact() {
 
   return (
     <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}>
+      <SEO titleKey="nav.contact" descriptionKey="contact.description" />
       <section className="page-header">
         <div className="container" style={{ position: 'relative', zIndex: 1 }}>
           <motion.span className="section-label" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}>

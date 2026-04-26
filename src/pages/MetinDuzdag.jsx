@@ -2,6 +2,7 @@ import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
 import { Globe, Code2, Cpu, Layout, Sparkles, Rocket, CheckCircle, ExternalLink } from 'lucide-react';
 import './Pages.css';
+import SEO from '../components/SEO';
 
 const techIcons = [Globe, Layout, Code2, Cpu];
 
@@ -10,6 +11,7 @@ export default function MetinDuzdag() {
 
   return (
     <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}>
+      <SEO titleKey="metinduzdag.title" descriptionKey="metinduzdag.heroDesc" />
       {/* Hero */}
       <section className="page-header" style={{ paddingBottom: '3rem' }}>
         <div className="container" style={{ position: 'relative', zIndex: 1 }}>

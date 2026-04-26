@@ -5,10 +5,11 @@ import { ArrowLeft, Clock, Calendar, Share2 } from 'lucide-react';
 import blogPosts from '../data/blogPosts';
 import blogTranslations from '../data/blogTranslations.json';
 import './Pages.css';
+import SEO from '../components/SEO';
 
 export default function BlogPost() {
   const { slug } = useParams();
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const post = blogPosts.find(p => p.id === slug);
 
   if (!post) {
@@ -35,6 +36,7 @@ export default function BlogPost() {
 
   return (
     <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}>
+      <SEO titleKey={post.titleKey} descriptionKey={post.descKey} image={post.image} type="article" />
       <section className="section" style={{ paddingTop: '8rem' }}>
         <div className="container">
           <div className="blog-post">

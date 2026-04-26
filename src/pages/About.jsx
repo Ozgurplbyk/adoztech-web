@@ -2,12 +2,14 @@ import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
 import { Target, Eye, Sparkles, Shield, Users, CheckCircle } from 'lucide-react';
 import './Pages.css';
+import SEO from '../components/SEO';
 
 export default function About() {
   const { t } = useTranslation();
 
   return (
     <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}>
+      <SEO titleKey="nav.about" descriptionKey="about.description" />
       <section className="page-header">
         <div className="container" style={{ position: 'relative', zIndex: 1 }}>
           <motion.span className="section-label" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}>

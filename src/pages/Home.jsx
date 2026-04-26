@@ -13,6 +13,7 @@ import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 
 import './Pages.css';
+import SEO from '../components/SEO';
 
 const fadeUp = {
   initial: { opacity: 0, y: 30 },
@@ -55,6 +56,7 @@ export default function Home() {
 
   return (
     <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{ duration: 0.3 }}>
+      <SEO titleKey="nav.home" descriptionKey="hero.subtitle" />
       {/* ===== HERO ===== */}
       <section className="hero" id="hero">
         <div className="hero__bg">

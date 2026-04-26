@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { Activity, BarChart3, Lightbulb, Bell, FileDown, ShieldCheck, CheckCircle, Apple } from 'lucide-react';
 import config from '../config';
 import './Pages.css';
+import SEO from '../components/SEO';
 
 const featureIcons = [Activity, BarChart3, Lightbulb, Bell, FileDown, ShieldCheck];
 
@@ -11,6 +12,7 @@ export default function GlukoMate() {
 
   return (
     <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}>
+      <SEO titleKey="glukomate.title" descriptionKey="glukomate.heroDesc" />
       {/* Hero */}
       <section className="page-header" style={{ paddingBottom: '3rem' }}>
         <div className="container" style={{ position: 'relative', zIndex: 1 }}>

@@ -5,6 +5,7 @@ import { motion } from 'framer-motion';
 import { Clock, ArrowRight } from 'lucide-react';
 import blogPosts from '../data/blogPosts';
 import './Pages.css';
+import SEO from '../components/SEO';
 
 const categoryKeys = ['all', 'webDev', 'mobile', 'ai', 'growth', 'uiux', 'social'];
 const categoryMap = {
@@ -17,8 +18,10 @@ const categoryMap = {
 };
 
 export default function Blog() {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const [filter, setFilter] = useState('all');
+  const langPrefix = i18n.language === 'tr' ? '' : `/${i18n.language}`;
+
 
   const filtered = filter === 'all'
     ? blogPosts
@@ -26,6 +29,7 @@ export default function Blog() {
 
   return (
     <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}>
+      <SEO titleKey="nav.blog" descriptionKey="blog.description" />
       <section className="page-header">
         <div className="container" style={{ position: 'relative', zIndex: 1 }}>
           <motion.span className="section-label" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}>
@@ -54,30 +58,32 @@ export default function Blog() {
             {filtered.map((post, idx) => (
               <motion.div key={post.id} className="blog-card card"
                 initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: idx * 0.05 }}>
-                <div className="blog-card__image">
-                  <img src={post.image} alt={post.titleKey} loading="lazy" />
-                </div>
-                <div className="blog-card__body">
-                  <div className="blog-card__meta">
-                    <span className="blog-card__category">
-                      {t(`blog.categories.${post.category}`)}
-                    </span>
-                    <span><Clock size={12} /> {post.readTime} {t('blog.readTime')}</span>
+                <Link to={`${langPrefix}/blog/${post.id}`} className="blog-card__link">
+                  <div className="blog-card__image">
+                    <img src={post.image} alt={t(post.titleKey)} loading="lazy" />
                   </div>
-                  <h3 className="blog-card__title">{t(post.titleKey)}</h3>
-                  <p className="blog-card__desc">{t(post.descKey)}</p>
-                  <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-                    <div className="blog-card__author">
-                      <div className="blog-card__avatar">
-                        {post.author.split(' ').map(n => n[0]).join('')}
-                      </div>
-                      <span>{post.author}</span>
+                  <div className="blog-card__body">
+                    <div className="blog-card__meta">
+                      <span className="blog-card__category">
+                        {t(`blog.categories.${post.category}`)}
+                      </span>
+                      <span><Clock size={12} /> {post.readTime} {t('blog.readTime')}</span>
                     </div>
-                    <Link to={`/blog/${post.id}`} className="btn btn-ghost btn-sm">
-                      {t('blog.readMore')} <ArrowRight size={14} />
-                    </Link>
+                    <h3 className="blog-card__title">{t(post.titleKey)}</h3>
+                    <p className="blog-card__desc">{t(post.descKey)}</p>
+                    <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                      <div className="blog-card__author">
+                        <div className="blog-card__avatar">
+                          {post.author.split(' ').map(n => n[0]).join('')}
+                        </div>
+                        <span>{post.author}</span>
+                      </div>
+                      <div className="btn btn-ghost btn-sm">
+                        {t('blog.readMore')} <ArrowRight size={14} />
+                      </div>
+                    </div>
                   </div>
-                </div>
+                </Link>
               </motion.div>
             ))}
           </div>
