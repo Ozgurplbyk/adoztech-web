@@ -45,11 +45,11 @@ export default function Footer() {
 
           <div className="footer__col">
             <h4>{t('footer.servicesTitle')}</h4>
-            <Link to="/services">{t('services.s1Title')}</Link>
-            <Link to="/services">{t('services.s2Title')}</Link>
-            <Link to="/services">{t('services.s3Title')}</Link>
-            <Link to="/services">{t('services.s4Title')}</Link>
-            <Link to="/services">{t('services.s5Title')}</Link>
+            <Link to="/services#s1">{t('services.s1Title')}</Link>
+            <Link to="/services#s2">{t('services.s2Title')}</Link>
+            <Link to="/services#s3">{t('services.s3Title')}</Link>
+            <Link to="/services#s4">{t('services.s4Title')}</Link>
+            <Link to="/services#s5">{t('services.s5Title')}</Link>
           </div>
 
           <div className="footer__col">

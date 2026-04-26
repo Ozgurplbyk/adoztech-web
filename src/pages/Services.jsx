@@ -1,5 +1,7 @@
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
+import { useLocation } from 'react-router-dom';
+import { useEffect } from 'react';
 import { Code, Smartphone, Brain, Share2, Palette, Search, Wrench, Fingerprint, CheckCircle } from 'lucide-react';
 import './Pages.css';
 
@@ -7,6 +9,21 @@ const serviceIcons = [Code, Smartphone, Brain, Share2, Palette, Search, Wrench, 
 
 export default function Services() {
   const { t } = useTranslation();
+  const { hash } = useLocation();
+
+  useEffect(() => {
+    if (hash) {
+      const element = document.getElementById(hash.replace('#', ''));
+      if (element) {
+        // Delay a bit to ensure animations/layout are ready
+        setTimeout(() => {
+          element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }, 300);
+      }
+    } else {
+      window.scrollTo(0, 0);
+    }
+  }, [hash]);
 
   return (
     <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}>
@@ -33,6 +50,7 @@ export default function Services() {
               return (
                 <motion.div
                   key={num}
+                  id={`s${num}`}
                   className="service-detail card"
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}

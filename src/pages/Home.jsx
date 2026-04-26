@@ -2,7 +2,16 @@ import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
 import { motion, useInView } from 'framer-motion';
 import { useRef, useEffect, useState } from 'react';
-import { ArrowRight, ArrowUpRight, MessageCircle, Code, Smartphone, Brain, Share2, Palette, Search, Wrench, Fingerprint } from 'lucide-react';
+import { ArrowRight, ArrowUpRight, Code, Smartphone, Brain, Share2, Palette, Search, Wrench, Fingerprint } from 'lucide-react';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Autoplay, Pagination, Navigation } from 'swiper/modules';
+import projectsData from '../data/projectsData';
+
+// Import Swiper styles
+import 'swiper/css';
+import 'swiper/css/pagination';
+import 'swiper/css/navigation';
+
 import './Pages.css';
 
 const fadeUp = {
@@ -62,8 +71,7 @@ export default function Home() {
 
             <motion.h1 className="hero__title" variants={fadeUp}>
               {t('hero.title')}{' '}
-              <span className="gradient-text">{t('hero.titleHighlight')}</span>
-              <br />
+              <span className="gradient-text">{t('hero.titleHighlight')}</span>{' '}
               {t('hero.titleEnd')}
             </motion.h1>
 
@@ -101,8 +109,8 @@ export default function Home() {
 
         <div className="hero__scroll-indicator">
           <motion.div
-            animate={{ y: [0, 8, 0] }}
-            transition={{ repeat: Infinity, duration: 2 }}
+            animate={{ y: [0, 6, 0] }}
+            transition={{ repeat: Infinity, duration: 2, ease: "easeInOut" }}
             className="hero__scroll-dot"
           />
         </div>
@@ -147,40 +155,54 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ===== FEATURED PROJECT ===== */}
-      <section className="section section--featured" id="featured-project">
+      {/* ===== PROJECTS SLIDER (APPLE STYLE) ===== */}
+      <section className="section section--featured" id="featured-project" style={{ overflow: 'hidden' }}>
         <div className="container">
           <div className="section-header">
             <span className="section-label">{t('projects.label')}</span>
             <h2 className="section-title">{t('projects.title')}</h2>
           </div>
+        </div>
 
-          <motion.div
-            className="featured-project"
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.7 }}
+        <div className="project-slider-container">
+          <Swiper
+            modules={[Pagination, Autoplay, Navigation]}
+            spaceBetween={30}
+            slidesPerView={1}
+            centeredSlides={true}
+            loop={true}
+            autoplay={{ delay: 5000, disableOnInteraction: false }}
+            pagination={{ clickable: true }}
+            breakpoints={{
+              768: { slidesPerView: 1.5 },
+              1024: { slidesPerView: 2.2 },
+              1440: { slidesPerView: 2.8 }
+            }}
+            className="project-swiper"
           >
-            <div className="featured-project__image">
-              <img src="/images/glukomate-hero.png" alt="GlukoMate" loading="lazy" />
-              <span className="featured-project__badge">{t('projects.featured')}</span>
-            </div>
-            <div className="featured-project__info">
-              <span className="section-label">{t('projects.p1Category')}</span>
-              <h3>{t('projects.p1Title')}</h3>
-              <p>{t('projects.p1Desc')}</p>
-              <Link to="/glukomate" className="btn btn-primary">
-                {t('projects.viewProject')} <ArrowUpRight size={16} />
-              </Link>
-            </div>
-          </motion.div>
+            {(projectsData.length === 2 ? [...projectsData, ...projectsData] : projectsData).map((project, idx) => (
+              <SwiperSlide key={`${project.id}-${idx}`}>
+                <div className="project-slide-card card">
+                  <div className="project-slide-image">
+                    <img src={project.image} alt={t(project.titleKey)} />
+                    <div className="project-slide-overlay">
+                       <span className="project-slide-category">{t(project.categoryKey)}</span>
+                       <h3>{t(project.titleKey)}</h3>
+                       <Link to={project.link} className="btn btn-primary btn-sm">
+                         {t('projects.viewProject')} <ArrowUpRight size={16} />
+                       </Link>
+                    </div>
+                  </div>
+                </div>
+              </SwiperSlide>
+            ))}
+          </Swiper>
+        </div>
 
-          <div className="text-center mt-xl">
-            <Link to="/projects" className="btn btn-secondary">
-              {t('projects.viewAll')} <ArrowRight size={16} />
-            </Link>
-          </div>
+        <div className="container text-center mt-xl">
+          <Link to="/projects" className="btn btn-secondary">
+            {t('projects.viewAll')} <ArrowRight size={16} />
+          </Link>
         </div>
       </section>
 
@@ -222,8 +244,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
-
     </motion.div>
   );
 }

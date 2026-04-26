@@ -12,7 +12,7 @@ export default function GlukoMate() {
   return (
     <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}>
       {/* Hero */}
-      <section className="page-header" style={{ paddingBottom: '6rem' }}>
+      <section className="page-header" style={{ paddingBottom: '3rem' }}>
         <div className="container" style={{ position: 'relative', zIndex: 1 }}>
           <div className="glukomate-hero">
             <motion.div initial={{ opacity: 0, x: -40 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.7 }}>

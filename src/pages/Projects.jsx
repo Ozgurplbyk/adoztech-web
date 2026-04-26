@@ -60,9 +60,15 @@ export default function Projects() {
                     <div className="project-card__overlay">
                       <span>
                         {p.link ? (
-                          <Link to={p.link} style={{ color: '#fff', display: 'flex', alignItems: 'center', gap: '0.375rem' }}>
-                            {t('projects.viewProject')} <ArrowUpRight size={14} />
-                          </Link>
+                          p.link.startsWith('http') ? (
+                            <a href={p.link} target="_blank" rel="noopener noreferrer" style={{ color: '#fff', display: 'flex', alignItems: 'center', gap: '0.375rem' }}>
+                              {t('projects.viewProject')} <ArrowUpRight size={14} />
+                            </a>
+                          ) : (
+                            <Link to={p.link} style={{ color: '#fff', display: 'flex', alignItems: 'center', gap: '0.375rem' }}>
+                              {t('projects.viewProject')} <ArrowUpRight size={14} />
+                            </Link>
+                          )
                         ) : (
                           <>{t('projects.viewProject')} <ArrowUpRight size={14} /></>
                         )}
@@ -70,9 +76,9 @@ export default function Projects() {
                     </div>
                   </div>
                   <div className="project-card__body">
-                    <p className="project-card__category">{p.categoryKey}</p>
-                    <h3 className="project-card__title">{p.titleKey}</h3>
-                    <p className="project-card__desc">{p.descKey}</p>
+                    <p className="project-card__category">{t(p.categoryKey)}</p>
+                    <h3 className="project-card__title">{t(p.titleKey)}</h3>
+                    <p className="project-card__desc">{t(p.descKey)}</p>
                   </div>
                 </motion.div>
               ))}

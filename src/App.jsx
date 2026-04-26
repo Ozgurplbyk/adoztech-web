@@ -16,6 +16,7 @@ import About from './pages/About';
 import Services from './pages/Services';
 import Projects from './pages/Projects';
 import GlukoMate from './pages/GlukoMate';
+import MetinDuzdag from './pages/MetinDuzdag';
 import Blog from './pages/Blog';
 import BlogPost from './pages/BlogPost';
 import Contact from './pages/Contact';
@@ -53,6 +54,8 @@ function App() {
             <Route path="/:lang/projects" element={<Projects />} />
             <Route path="/glukomate" element={<GlukoMate />} />
             <Route path="/:lang/glukomate" element={<GlukoMate />} />
+            <Route path="/metin-duzdag" element={<MetinDuzdag />} />
+            <Route path="/:lang/metin-duzdag" element={<MetinDuzdag />} />
             <Route path="/blog" element={<Blog />} />
             <Route path="/:lang/blog" element={<Blog />} />
             <Route path="/blog/:slug" element={<BlogPost />} />

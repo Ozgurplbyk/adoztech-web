@@ -1,16 +1,22 @@
 const projectsData = [
   {
     id: 'glukomate',
-    titleKey: 'GlukoMate',
-    descKey: 'Akıllı kan şekeri takibi ve YZ destekli analizler sunan kapsamlı diyabet yönetimi mobil uygulaması.',
-    categoryKey: 'Mobil Uygulama',
+    titleKey: 'projects.p1Title',
+    descKey: 'projects.p1Desc',
+    categoryKey: 'projects.p1Category',
     categoryFilter: 'mobile',
     image: '/images/glukomate-hero.png',
     link: '/glukomate'
+  },
+  {
+    id: 'metinduzdag',
+    titleKey: 'projects.p7Title',
+    descKey: 'projects.p7Desc',
+    categoryKey: 'projects.p7Category',
+    categoryFilter: 'web',
+    image: '/images/projects/metinduzdag-1.png',
+    link: '/metin-duzdag'
   }
-  // YENİ PROJE EKLEMEK İÇİN: 
-  // Yukarıdaki yapıyı kopyalayarak yeni bir obje ekleyin. 
-  // 'id', 'titleKey', 'descKey', 'categoryKey', 'categoryFilter', 'image' alanlarını doldurun.
 ];
 
 export default projectsData;
